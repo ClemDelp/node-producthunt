@@ -30,6 +30,8 @@
     "sinon": "^1.17.2"
   },
   "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
     "request": "^2.65.0"
   }
 }
