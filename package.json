@@ -4,7 +4,8 @@
   "description": "node.js wrapper for the Product Hunt API",
   "main": "index.js",
   "scripts": {
-    "test": "mocha ./test/v1.0.0"
+    "test": "mocha ./test/v1.0.0",
+    "dev": "nodemon rest-api.js"
   },
   "repository": {
     "type": "git",
