@@ -31,7 +31,10 @@ module.exports = function(client) {
 
     var path;
     if (options.category_name) {
-      path = `/categories/${options.category_name}/posts`;
+      // path = `/categories/${options.category_name}/posts`;
+      path = `/posts/all?search[category]=${options.category_name}`;
+    } else if (options.topics_id){
+      path = `/posts/all?search[topic]=${options.topics_id}`;
     } else {
       path = '/posts';
     }
