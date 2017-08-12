@@ -52,6 +52,24 @@ app.get('/posts', (req, res) => {
   })
 })
 
+app.get('/posts/category/:category_name', (req, res) => {
+  const category_name = req.params.category_name
+  // List all live events and filter by category
+  productHunt.posts.index({category_name}, (v, response) => {
+    res.type('application/json')
+    res.send({data: JSON.parse(response.body)})
+  })
+})
+
+app.get('/posts/topic/:topics_id', (req, res) => {
+  const topics_id = req.params.topics_id
+  // List all live events and filter by category
+  productHunt.posts.index({topics_id}, (v, response) => {
+    res.type('application/json')
+    res.send({data: JSON.parse(response.body)})
+  })
+})
+
 app.listen(port, (err) => {
   if (err) {
     return console.log('something bad happened', err);
